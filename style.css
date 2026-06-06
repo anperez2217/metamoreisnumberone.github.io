@@ -1,3 +1,11 @@
+html {
+    scroll-behavior: smooth; /* Makes clicking the 'tabs' slide smoothly to the section */
+}
+
+* {
+    box-sizing: border-box; /* Ensures padding doesn't increase the width of elements */
+}
+
 body {
     background-color: #0b0b0b; /* Matches the textured off-black in the logo image */
     color: #ffffff;           /* Makes the text white */
@@ -5,14 +13,78 @@ body {
     font-family: 'Courier New', Courier, monospace; /* A more 'punk' typewriter font */
     margin: 0;
     padding: 50px 20px;
+    line-height: 1.6;
 }
 
 img {
     display: block;           /* Necessary for margin auto to work */
     margin-left: auto;        /* Centers the image horizontally */
     margin-right: auto;       /* Centers the image horizontally */
-    margin-bottom: 30px;      /* Adds space below the logo */
+    margin-bottom: 80px;      /* Maintained large gap before the content sections */
     max-width: 100%;          /* Prevents the 4K image from being wider than the screen */
     height: auto;             /* Keeps the aspect ratio correct */
     width: 1200px;            /* Increased size for more impact */
 }
+
+nav {
+    margin: 0 0 40px 0;       /* Removed top margin for the header, kept tight gap to logo */
+    display: flex;            /* Modern centering approach */
+    justify-content: center;  /* Centers tabs horizontally */
+    flex-wrap: wrap;          /* Ensures tabs wrap on smaller mobile screens */
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 30px;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff0000; /* Punk red highlight on hover */
+    text-decoration: line-through;
+}
+
+section {
+    max-width: 800px;
+    margin: 0 auto 100px auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    border-bottom: 2px solid #ffffff;
+    display: inline-block;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+}
+
+.show-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.show-list li {
+    border-bottom: 1px solid #333;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.date { color: #ff0000; font-weight: bold; }
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+footer { margin-top: 100px; color: #555; font-size: 0.8rem; }
