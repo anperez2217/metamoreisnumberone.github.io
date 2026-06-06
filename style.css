@@ -1,6 +1,18 @@
 body {
-background-color:black;
-color:white;
-font-family:sans-serif;
-margin:50px;
+    background-color: #0b0b0b; /* Matches the textured off-black in the logo image */
+    color: #ffffff;           /* Makes the text white */
+    text-align: center;       /* Centers the text (h1, p) */
+    font-family: 'Courier New', Courier, monospace; /* A more 'punk' typewriter font */
+    margin: 0;
+    padding: 50px 20px;
+}
+
+img {
+    display: block;           /* Necessary for margin auto to work */
+    margin-left: auto;        /* Centers the image horizontally */
+    margin-right: auto;       /* Centers the image horizontally */
+    margin-bottom: 30px;      /* Adds space below the logo */
+    max-width: 100%;          /* Prevents the 4K image from being wider than the screen */
+    height: auto;             /* Keeps the aspect ratio correct */
+    width: 1200px;            /* Increased size for more impact */
 }
