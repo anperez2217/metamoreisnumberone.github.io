@@ -79,8 +79,8 @@ nav {
     justify-content: center;
     flex-wrap: wrap;
     gap: 24px;
-    border-top: 1px solid #0b0b0b;
-    border-bottom: 1px solid #0b0b0b;
+    border-top: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
     padding: 18px 0;
 }
 
