@@ -7,62 +7,116 @@ html {
 }
 
 body {
-    background-color: #0b0b0b; /* Matches the textured off-black in the logo image */
-    color: #ffffff;           /* Makes the text white */
-    text-align: center;       /* Centers the text (h1, p) */
-    font-family: 'Courier New', Courier, monospace; /* A more 'punk' typewriter font */
-    margin: 0;
+    background-color: #0b0b0b;
+    color: #f5f5f5;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0 auto;
     padding: 50px 20px;
-    line-height: 1.6;
+    max-width: 1200px;
+    line-height: 1.65;
 }
 
 img {
-    display: block;           /* Necessary for margin auto to work */
-    margin-left: auto;        /* Centers the image horizontally */
-    margin-right: auto;       /* Centers the image horizontally */
-    margin-bottom: 80px;      /* Maintained large gap before the content sections */
-    max-width: 100%;          /* Prevents the 4K image from being wider than the screen */
-    height: auto;             /* Keeps the aspect ratio correct */
-    width: 1200px;            /* Increased size for more impact */
+    display: block;
+    margin: 0 auto 70px;
+    max-width: 100%;
+    height: auto;
+    width: min(1200px, 100%);
+    border-radius: 30px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.45);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0 6px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.social-links {
+    color: #d8d8d8;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
+.social-links span {
+    color: #8a8a8a;
+    margin-right: 10px;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.social-links a:hover {
+    color: #ff3aff;
+    transform: translateY(-1px);
+}
+
+.divider {
+    color: #5d5d5d;
 }
 
 nav {
-    margin: 0 0 40px 0;       /* Removed top margin for the header, kept tight gap to logo */
-    display: flex;            /* Modern centering approach */
-    justify-content: center;  /* Centers tabs horizontally */
-    flex-wrap: wrap;          /* Ensures tabs wrap on smaller mobile screens */
-    border-top: 1px solid #333;
-    border-bottom: 1px solid #333;
-    padding: 15px 0;
+    margin: 0 0 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 18px 0;
 }
 
 nav a {
-    color: #ffffff;
+    color: #f5f5f5;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 30px;
-    font-size: 1.2rem;
+    margin: 0 10px;
+    font-size: 1.15rem;
     letter-spacing: 2px;
-    transition: color 0.3s ease;
+    padding: 10px 14px;
+    border-radius: 999px;
+    transition: color 0.25s ease, transform 0.25s ease, text-decoration 0.25s ease, background 0.25s ease;
 }
 
 nav a:hover {
-    color: #ff0000; /* Punk red highlight on hover */
+    color: #ff0000;
     text-decoration: line-through;
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-2px);
 }
 
 section {
-    max-width: 800px;
-    margin: 0 auto 100px auto;
-    padding: 20px;
+    max-width: 840px;
+    margin: 0 auto 90px;
+    padding: 30px 26px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 26px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+    width: 100%;
 }
 
 h2 {
-    font-size: 2.5rem;
-    border-bottom: 2px solid #ffffff;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    border-bottom: 2px solid #ff0080;
     display: inline-block;
-    margin-bottom: 30px;
-    letter-spacing: 5px;
+    margin-bottom: 28px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+section p {
+    max-width: 740px;
+    margin: 0 auto;
+    color: #e8e8e8;
+    font-size: 1rem;
 }
 
 .show-list {
@@ -72,13 +126,37 @@ h2 {
 }
 
 .show-list li {
-    border-bottom: 1px solid #333;
-    padding: 15px 0;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.02);
+    padding: 18px 22px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-radius: 18px;
+    margin-bottom: 18px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
-.date { color: #ff0000; font-weight: bold; }
+.show-list li:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 0, 170, 0.35);
+}
+
+.show-list li span {
+    display: inline-block;
+}
+
+.date { color: #ff4cff; font-weight: bold; min-width: 85px; }
+
+.venue {
+    flex: 1;
+    margin: 0 16px;
+    color: #f4f4f4;
+}
+
+.location {
+    color: #cfcfcf;
+}
 
 .merch-grid {
     display: grid;
