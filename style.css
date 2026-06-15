@@ -36,11 +36,14 @@ body::before {
 }
 
 .logo-frame {
-    display: inline-block;
-    padding: 0;
-    background-color: #0b0b0b;
-    border-radius: 0;
-    box-shadow: none;
+    display: block;
+    margin: 0 auto 54px;
+    width: min(840px, 100%);
+    border: 2px solid #fff;
+    border-radius: 26px;
+    box-shadow: 12px 12px 0px #fff;
+    padding: 20px;
+    background: #000;
 }
 
 img {
@@ -55,8 +58,10 @@ img {
 }
 
 .logo-frame img {
-    width: min(720px, 100%);
-    margin-bottom: 54px;
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .hero,
