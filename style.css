@@ -7,9 +7,8 @@ html {
 }
 
 body {
-    background: radial-gradient(circle at top, rgba(255, 20, 180, 0.12), transparent 25%),
-                linear-gradient(180deg, #070707 0%, #0b0b0b 40%, #080808 100%);
-    color: #f5f5f5;
+    background: #000;
+    color: #fff;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: 500;
@@ -24,9 +23,12 @@ body::before {
     content: '';
     position: fixed;
     inset: 0;
-    background-image: radial-gradient(circle at 20% 10%, rgba(255,0,140,0.08), transparent 22%),
-                      radial-gradient(circle at 80% 25%, rgba(255,255,255,0.04), transparent 14%),
-                      linear-gradient(180deg, rgba(255,0,170,0.02), transparent 40%, rgba(0,0,0,0.18));
+    background-image: 
+        radial-gradient(circle at 15% 15%, rgba(255,255,255,0.15) 0%, transparent 10%),
+        radial-gradient(circle at 85% 40%, rgba(255,255,255,0.1) 0%, transparent 8%),
+        radial-gradient(circle at 40% 70%, rgba(255,255,255,0.12) 0%, transparent 12%),
+        radial-gradient(circle at 70% 10%, rgba(255,255,255,0.08) 1px, transparent 2px),
+        radial-gradient(circle at 20% 80%, rgba(255,255,255,0.08) 2px, transparent 4px);
     pointer-events: none;
     z-index: -1;
 }
@@ -46,7 +48,7 @@ img {
     height: auto;
     width: min(1100px, 100%);
     border-radius: 28px;
-    box-shadow: none;
+    box-shadow: 8px 8px 0px #fff;
     filter: brightness(0.95) saturate(1.05);
 }
 
@@ -64,8 +66,8 @@ img {
     margin-bottom: 60px;
     text-align: left;
     padding: 24px;
-    background: rgba(12, 12, 12, 0.86);
-    border: 1px solid rgba(255, 0, 170, 0.12);
+    background: #000;
+    border: 3px solid #fff;
     border-radius: 28px;
     box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
 }
@@ -85,11 +87,14 @@ img {
 }
 
 .superhead {
-    color: #ff4cff;
+    background: #fff;
+    color: #000;
+    display: inline-block;
+    padding: 2px 8px;
     letter-spacing: 0.3em;
     font-size: 0.95rem;
     text-transform: uppercase;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .hero h1 {
@@ -108,8 +113,8 @@ img {
 
 section.gallery,
 .photo-grid-section {
-    background: linear-gradient(135deg, rgba(20, 6, 18, 0.96), rgba(0, 0, 0, 0.95));
-    border: 1px solid rgba(255, 0, 170, 0.12);
+    background: #000;
+    border: 3px solid #fff;
     box-shadow: 0 30px 90px rgba(0, 0, 0, 0.32);
     padding: 34px 30px;
 }
@@ -183,8 +188,8 @@ section.gallery,
 
 .photo-card:hover {
     transform: translateY(-3px);
-    border-color: rgba(255, 0, 170, 0.65);
-    box-shadow: 0 25px 55px rgba(255, 0, 170, 0.12);
+    border-color: #fff;
+    box-shadow: 10px 10px 0px #fff;
 }
 
 .photo-card img {
@@ -200,16 +205,16 @@ section.gallery,
 
 
 .photo-splash {
-    background: linear-gradient(135deg, rgba(255, 0, 140, 0.12), rgba(0, 0, 0, 0.95));
-    border: 1px solid rgba(255, 0, 140, 0.15);
+    background: #000;
+    border: 3px solid #fff;
     border-radius: 28px;
     overflow: hidden;
     align-items: stretch;
 }
 
 .bio-hero {
-    background: rgba(18, 18, 18, 0.95);
-    border: 1px solid rgba(255, 0, 140, 0.12);
+    background: #000;
+    border: 3px solid #fff;
     border-radius: 28px;
     margin-bottom: 60px;
     padding: 40px 30px;
@@ -263,7 +268,7 @@ section.gallery,
     justify-content: center;
     padding: 12px 0 6px;
     margin-bottom: 20px;
-    border-bottom: 1px solid #0b0b0b;
+    border-bottom: 2px solid #fff;
 }
 
 .social-links {
@@ -285,7 +290,7 @@ section.gallery,
 }
 
 .social-links a:hover {
-    color: #ff3aff;
+    text-decoration: underline;
     transform: translateY(-1px);
 }
 
@@ -318,9 +323,9 @@ nav a {
 }
 
 nav a:hover {
-    color: #ff0000;
-    text-decoration: line-through;
-    background: rgba(255, 255, 255, 0.06);
+    color: #000;
+    text-decoration: none;
+    background: #fff;
     transform: translateY(-2px);
 }
 
@@ -328,15 +333,15 @@ section {
     max-width: 840px;
     margin: 0 auto 90px;
     padding: 30px 26px;
-    background: rgba(12, 12, 12, 0.96);
-    border: 1px solid rgba(255, 0, 170, 0.08);
+    background: #000;
+    border: 2px solid #fff;
     border-radius: 26px;
-    box-shadow: 0 35px 70px rgba(0, 0, 0, 0.18);
+    box-shadow: 12px 12px 0px #fff;
     width: 100%;
 }
 
 section.gallery {
-    background: linear-gradient(160deg, rgba(10, 10, 10, 0.98), rgba(15, 2, 12, 0.96));
+    background: #000;
 }
 
 .bio-text {
@@ -346,12 +351,14 @@ section.gallery {
 h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: clamp(2rem, 4vw, 2.8rem);
-    border-bottom: 2px solid #ff0080;
+    background: #fff;
+    color: #000 !important;
     display: inline-block;
+    padding: 10px 20px;
     margin-bottom: 28px;
-    letter-spacing: 6px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    text-shadow: 0 0 18px rgba(255, 0, 0, 0.16);
+    transform: rotate(-1.5deg);
 }
 
 section h2 {
@@ -372,8 +379,8 @@ section p {
 }
 
 .show-list li {
-    border: 1px solid #0b0b0b;
-    background-color: #0b0b0b;
+    border: 2px solid #fff;
+    background-color: #000;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -384,14 +391,14 @@ section p {
 
 .show-list li:hover {
     transform: translateY(-3px);
-    border-color: rgba(255, 0, 170, 0.35);
+    background: #fff;
 }
 
 .show-list li span {
     display: inline-block;
 }
 
-.date { color: #ff4cff; font-weight: bold; min-width: 85px; }
+.date { color: #fff; font-weight: bold; min-width: 85px; }
 
 .venue {
     flex: 1;
@@ -399,10 +406,15 @@ section p {
     color: #f4f4f4;
 }
 
+.show-list li:hover .venue,
+.show-list li:hover .date,
+.show-list li:hover .location {
+    color: #000;
+}
+
 .location {
     color: #cfcfcf;
 }
-
 .merch-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
