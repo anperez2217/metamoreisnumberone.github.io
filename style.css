@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Gochi+Hand&display=swap');
+
 html {
     scroll-behavior: smooth; /* Makes clicking the 'tabs' slide smoothly to the section */
 }
@@ -10,7 +12,7 @@ body {
     background: #000;
     color: #fff;
     text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Gochi Hand', cursive;
     font-weight: 500;
     margin: 0 auto;
     padding: 50px 20px;
@@ -89,15 +91,17 @@ img {
 .superhead {
     background: #fff;
     color: #000;
+    font-family: 'Rock Salt', cursive;
     display: inline-block;
     padding: 2px 8px;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.1em;
     font-size: 0.95rem;
     text-transform: uppercase;
     margin-bottom: 20px;
 }
 
 .hero h1 {
+    font-family: 'Rock Salt', cursive;
     font-size: clamp(2.6rem, 5vw, 4rem);
     margin: 0 0 20px;
     line-height: 1.05;
@@ -312,21 +316,44 @@ nav {
 nav a {
     color: #f5f5f5;
     text-decoration: none;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Rock Salt', cursive;
     font-weight: 700;
     margin: 0 10px;
     font-size: 1.15rem;
-    letter-spacing: 2px;
     padding: 10px 14px;
+    position: relative;
     border-radius: 999px;
     transition: color 0.25s ease, transform 0.25s ease, text-decoration 0.25s ease, background 0.25s ease;
 }
 
 nav a:hover {
-    color: #000;
+    color: #000 !important;
     text-decoration: none;
-    background: #fff;
-    transform: translateY(-2px);
+    background: transparent;
+}
+
+nav a:hover,
+nav a.active {
+    color: #000 !important; /* Black text on red slash looks like a censored stamp */
+    transform: scale(1.1); /* Slightly enlarge the active tab */
+    outline: none; /* Removes the default browser blue box */
+}
+
+nav a:hover::after,
+nav a.active::after {
+    content: '';
+    position: absolute;
+    left: -15px;
+    right: -15px;
+    top: 50%;
+    height: 18px; /* Thinned out for a better marker stroke look */
+    background: #ff0000; /* Pure, aggressive red */
+    transform: translateY(-50%) rotate(-4deg) skewX(-15deg); /* Messy, fast slash angle */
+    pointer-events: none;
+    z-index: -1; /* Puts the slash behind the text but over the background */
+    opacity: 1;
+    display: block;
+    box-shadow: 3px 3px 0px #000; /* Adds a "sticker" or "tape" depth */
 }
 
 section {
@@ -349,13 +376,13 @@ section.gallery {
 }
 
 h2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Rock Salt', cursive;
     font-size: clamp(2rem, 4vw, 2.8rem);
     background: #fff;
     color: #000 !important;
     display: inline-block;
     padding: 10px 20px;
-    margin-bottom: 28px;
+    margin-bottom: 35px;
     letter-spacing: 2px;
     text-transform: uppercase;
     transform: rotate(-1.5deg);

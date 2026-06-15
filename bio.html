@@ -70,5 +70,33 @@
         <footer>
             <p>&copy; 2026 METAMORE. ALL RIGHTS RESERVED.</p>
         </footer>
+
+        <script>
+            function updateActive() {
+                const navLinks = document.querySelectorAll('nav a');
+                const hash = window.location.hash;
+                const isBioPage = window.location.pathname.includes('bio.html');
+                navLinks.forEach(link => link.classList.remove('active'));
+                if (hash) {
+                    navLinks.forEach(link => {
+                        const href = link.getAttribute('href');
+                        if (href === hash || href.endsWith(hash)) link.classList.add('active');
+                    });
+                } else {
+                    const fallback = isBioPage ? 'bio.html' : 'index.html';
+                    navLinks.forEach(link => { if(link.getAttribute('href').includes(fallback)) link.classList.add('active'); });
+                }
+            }
+            window.addEventListener('load', updateActive);
+            window.addEventListener('hashchange', updateActive);
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', function() {
+                    if (this.getAttribute('href').startsWith('#')) {
+                        document.querySelectorAll('nav a').forEach(l => l.classList.remove('active'));
+                        this.classList.add('active');
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
